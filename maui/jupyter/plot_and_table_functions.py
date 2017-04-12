@@ -15,7 +15,10 @@ from matplotlib.colors import ListedColormap
 from matplotlib import gridspec
 import pandas as pd
 import numpy as np
-from IPython.display import display
+from IPython.display import display, HTML
+
+def print_df_no_index( df ):
+    display(HTML(df.to_html(index=False)))
 
 def discrete_cmap(N, base_cmap=None):
     """
