@@ -113,8 +113,8 @@ SOIL_STORAGE_MAX_MISSING_VALUES_ACTION       mean
 (7) Other gridded datasets required for the Maui example
 --------------------------------------------------------
 
-POTENTIAL_ET ARC_GRID input/gr0_in_month_ascii/gr0_in_%b__maui.asc
-POTENTIAL_ET_PROJECTION_DEFINITION +proj=lonlat +datum=WGS84 +no_defs
+REFERENCE_ET0 ARC_GRID input/gr0_in_month_ascii/gr0_in_%b__maui.asc
+REFERENCE_ET0_PROJECTION_DEFINITION +proj=lonlat +datum=WGS84 +no_defs
 
 FOG_RATIO ARC_GRID input/fog_fraction_grids/maui_fog_ratio_monthly_%0m__50m.asc
 FOG_RATIO_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
@@ -122,12 +122,8 @@ FOG_RATIO_MISSING_VALUES_CODE          0.0
 FOG_RATIO_MISSING_VALUES_OPERATOR      <
 FOG_RATIO_MISSING_VALUES_ACTION       zero
 
-CESSPOOL_LEAKAGE ARC_GRID input/maui_cesspool_effluent_inches_day__50m.asc
+CESSPOOL_LEAKAGE ARC_GRID input/maui_CESSPOOL_EFFLUENT_INCHES_DAY__50m.asc
 CESSPOOL_LEAKAGE_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
-
-POLYGON_ID ARC_GRID input/maui_POLYGON_ID__50m.asc
-POLYGON_ID_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
-
 
 (8) Grids required for Gash Interception
 -----------------------------------------
