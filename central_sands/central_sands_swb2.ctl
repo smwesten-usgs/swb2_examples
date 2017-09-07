@@ -4,7 +4,7 @@
 
 ! Grid definition: projected coordinates are Wisconsin Transverse Mercator (83/91), meters
 !      nx    ny     xll          yll     resolution
-GRID  300   150  545300       432200       45.0
+GRID  400   346  545300       432200       90.0
 BASE_PROJECTION_DEFINITION +proj=tmerc +lat_0=0.0 +lon_0=-90.0 +k=0.9996 +x_0=520000 +y_0=-4480000 +datum=NAD83 +units=m
 
 %% Define methods

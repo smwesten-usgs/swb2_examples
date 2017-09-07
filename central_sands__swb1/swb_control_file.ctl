@@ -29,7 +29,7 @@ GROWING_SEASON 133 268 TRUE
 ANSI_COLORS FALSE
 RLE_MULTIPLIER 10000
 
-PRECIPITATION NETCDF /Users/smwesten/SMWData/COMMON_CLIMATE/Daymet_V3_2016/daymet_v3_prcp_%y_na.nc4
+PRECIPITATION NETCDF ../COMMON/prcp_Daymet_v3_%y.nc
 PRECIPITATION_GRID_PROJECTION_DEFINITION +proj=lcc +lat_1=25.0 +lat_2=60.0 +lat_0=42.5 +lon_0=-100.0 +x_0=0.0 +y_0=0.0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
 NETCDF_PRECIP_Z_VAR                       prcp
 PRECIPITATION_SCALE_FACTOR          0.03937008
@@ -37,8 +37,7 @@ PRECIPITATION_MISSING_VALUES_CODE      -9999.0
 PRECIPITATION_MISSING_VALUES_OPERATOR      <=
 PRECIPITATION_MISSING_VALUES_ACTION       ZERO
 
-TEMPERATURE NETCDF /Users/smwesten/SMWData/COMMON_CLIMATE/Daymet_V3_2016/daymet_v3_tmax_%y_na.nc4 /Users/smwesten/SMWData/COMMON_CLIMATE/Daymet_V3_2016/daymet_v3_tmin_%y_na.nc4
-#TMAX NETCDF /Users/smwesten/SMWData/COMMON_CLIMATE/Daymet_V3_2016/daymet_v3_tmax_%y_na.nc4
+TEMPERATURE NETCDF ../COMMON/tmax_Daymet_v3_%y.nc ../COMMON/tmin_Daymet_v3_%y.nc
 TMAX_GRID_PROJECTION_DEFINITION +proj=lcc +lat_1=25.0 +lat_2=60.0 +lat_0=42.5 +lon_0=-100.0 +x_0=0.0 +y_0=0.0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
 TMAX_SCALE_FACTOR                 1.8
 TMAX_ADD_OFFSET                  32.0
@@ -46,7 +45,6 @@ TMAX_MISSING_VALUES_CODE      -9999.0
 TMAX_MISSING_VALUES_OPERATOR      <=
 TMAX_MISSING_VALUES_ACTION       MEAN
 
-#TMIN NETCDF /Users/smwesten/SMWData/COMMON_CLIMATE/Daymet_V3_2016/daymet_v3_tmin_%y_na.nc4
 TMIN_GRID_PROJECTION_DEFINITION +proj=lcc +lat_1=25.0 +lat_2=60.0 +lat_0=42.5 +lon_0=-100.0 +x_0=0.0 +y_0=0.0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs
 TMIN_SCALE_FACTOR                 1.8
 TMIN_ADD_OFFSET                  32.0
@@ -212,6 +210,6 @@ OUTPUT_FORMAT ARC_GRID
 #*******************************************************************
 # BEGIN SOLUTION
 #
-SOLVE_NO_TS_FILE 2013 2014
+SOLVE_NO_TS_FILE 2012 2013
 EOJ
 #
