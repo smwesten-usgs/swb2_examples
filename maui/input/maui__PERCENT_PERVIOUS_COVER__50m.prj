@@ -1,1 +1,7 @@
-GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]]
+Projection    UTM
+Zone           4
+Datum         HPGN
+Spheroid      GRS80
+Units         METERS
+Zunits        NO
+Parameters    

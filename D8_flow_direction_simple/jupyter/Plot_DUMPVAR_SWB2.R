@@ -1,4 +1,4 @@
-swb2_dir <- "~/SMWData/swb2_report/swb_examples/D8_toy/"
+swb2_dir <- "D:\\SMWData\\Source_Code\\swb2_examples\\D8_flow_direction_simple\\"
 
 swb2_filename <- paste( swb2_dir, "SWB2_variable_values__start_index_1__end_index_25.csv", sep="" )
 
