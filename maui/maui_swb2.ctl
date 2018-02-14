@@ -1,6 +1,6 @@
 
 # Input file for swb2, Maui low-res Test Case
-# Base projection: Hawaii Albers Equal Area Conic
+# Base projection: UTM Zone 4 North
 # (comment characters: !#$%*()-[] )
 -------------------------------------------------
 
@@ -30,8 +30,12 @@ FLOW_ROUTING_METHOD              NONE
 IRRIGATION_METHOD                FAO-56
 CROP_COEFFICIENT_METHOD          FAO-56
 DIRECT_RECHARGE_METHOD           GRIDDED
+#DIRECT_SOIL_MOISTURE_METHOD      TABULAR
 SOIL_STORAGE_MAX_METHOD          GRIDDED
 
+** The code doesn't actually process any of the text following 'DIRECT_RECHARGE_METHOD'
+**   or 'DIRECT_SOIL_MOISTURE_METHOD'. Therefore, any value that makes sense to the
+**   user may be used.
 
 (2) Initial conditions for soil moisture, snow
 -----------------------------------------------
@@ -103,7 +107,7 @@ SOILS_CODE CONSTANT 1
 %% for an available water capacity grid (soil_storage_max = awc * rooting_depth).
 
 SOIL_STORAGE_MAX ARC_GRID input/maui_SOIL_MOISTURE_STORAGE__50m.asc
-#MAX_SOIL_STORAGE_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
+SOIL_STORAGE_MAX_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
 SOIL_STORAGE_MAX_MISSING_VALUES_CODE          0.0
 SOIL_STORAGE_MAX_MISSING_VALUES_OPERATOR      <
 SOIL_STORAGE_MAX_MISSING_VALUES_ACTION       mean
@@ -146,13 +150,44 @@ PERCENT_PERVIOUS_COVER ARC_GRID input/maui__PERCENT_PERVIOUS_COVER__50m.asc
 PERCENT_PERVIOUS_COVER_PROJECTION_DEFINITION +proj=utm +zone=4 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
 
 
-(10) Lookup table(s)
+(10) Output control
+——————————————
+OUTPUT ENABLE gross_precipitation
+OUTPUT ENABLE rainfall
+OUTPUT ENABLE interception
+OUTPUT ENABLE runon
+OUTPUT ENABLE runoff
+OUTPUT ENABLE reference_ET0
+OUTPUT ENABLE actual_et
+OUTPUT ENABLE net_infiltration
+OUTPUT ENABLE rejected_net_infiltration
+OUTPUT ENABLE infiltration
+OUTPUT ENABLE irrigation
+OUTPUT ENABLE runoff_outside
+OUTPUT ENABLE crop_et
+
+OUTPUT ENABLE tmin
+OUTPUT ENABLE tmax
+OUTPUT ENABLE gdd
+
+OUTPUT ENABLE snow_storage
+OUTPUT ENABLE soil_storage
+OUTPUT ENABLE delta_soil_storage
+
+OUTPUT ENABLE snowmelt
+OUTPUT ENABLE snowfall
+
+OUTPUT ENABLE direct_net_infiltation
+OUTPUT ENABLE direct_soil_moisture
+
+
+(11) Lookup table(s)
 --------------------
 
 LAND_USE_LOOKUP_TABLE std_input/Landuse_lookup_maui.txt
 
 
-(11) Start and end date for simulation
+(12) Start and end date for simulation
 --------------------------------------
 
 START_DATE 01/01/2001
