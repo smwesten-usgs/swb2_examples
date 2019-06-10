@@ -10,7 +10,7 @@ Each example directory contains all of the required daily weather data, geograph
 Disclaimer
 ----------
 
-The example applications within this repository were selected to demonstrate the features and use of the SWB verison 2.0 code. These applications, along with the input, lookup, and parameter datasets do *not* represent official versions of any related USGS project work. Model parameters should always be chosen thoughtfully as applicable to local site conditions.
+The example applications within this repository were selected to demonstrate the features and use of the SWB version 2.0 code. These applications, along with the input, lookup, and parameter datasets do *not* represent official versions of any related USGS project work. Model parameters should always be chosen thoughtfully as applicable to local site conditions.
 
 These data are in the public domain because they contain materials that originally came from the U.S. Geological Survey, an agency of the United States Department of Interior. For more information, see the official USGS copyright policy at [https://www.usgs.gov/visual-id/credit_usgs.html#copyright](https://www.usgs.gov/visual-id/credit_usgs.html#copyright)
 
