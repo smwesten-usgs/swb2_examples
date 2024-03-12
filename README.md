@@ -7,7 +7,7 @@ This repository contains three working examples for use with the SWB version 2.0
 
 Each example directory contains all of the required daily weather data, geographic information system (GIS) inputs, lookup tables, and control files needed to run on a users' local system. In addition, each application directory contains a "jupyter" folder that contains a number of Jupyter notebooks (see http://jupyter.org/ for more information about Jupyter.) The Jupyter notebooks are designed to provide examples showing control file options, lookup table manipulation, and NetCDF file processing. 
 
-> :warning: **These examples are known to work with the binary files included in this repo** They may not work with older versions of swb or swb2.
+> :warning: **These examples are known to work with the binary files included in this repo.** They may not work with older versions of swb or swb2.
 
 Disclaimer
 ----------
